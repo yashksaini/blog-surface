@@ -1,0 +1,126 @@
+<nav class="navbar navbar-expand-lg navbar-dark nav_back">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"> <span class="proj">Blog Surface</span></a>
+    <button
+      class="navbar-toggler menu_btn"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="login">
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            href="#"
+            *ngIf="!loggedIn"
+            ><a href="#" data-bs-toggle="modal" data-bs-target="#signup"
+              >SignUp</a
+            >
+            /
+            <a href="#" data-bs-toggle="modal" data-bs-target="#login1"
+              >LogIn
+            </a></a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            routerLink="/blogs"
+            *ngIf="loggedIn"
+          >
+            Blogs
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            routerLink="/profile/{{ user.uid }}"
+            *ngIf="loggedIn"
+          >
+            Profile
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            href="#"
+            *ngIf="loggedIn"
+            (click)="logout()"
+          >
+            LogOut
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Modal For SignUp-->
+<div
+  class="modal fade"
+  id="signup"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+  style="border-radius: 0px"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">
+          <span class="proj">Blog Surface</span>
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          id="signinClose"
+        ></button>
+      </div>
+      <div>
+        <app-signup></app-signup>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal For Login-->
+<div
+  class="modal fade"
+  id="login1"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+  style="border-radius: 0px"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">
+          <span class="proj">Blog Surface</span>
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          id="loginClose"
+        ></button>
+      </div>
+      <div>
+        <app-login></app-login>
+      </div>
+    </div>
+  </div>
+</div>

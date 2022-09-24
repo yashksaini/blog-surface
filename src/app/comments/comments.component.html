@@ -1,0 +1,40 @@
+<div class="container" *ngFor="let post of postData">
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-8">
+      <h1 class="post_head">{{ post.data().title }}</h1>
+      <hr />
+      <div [innerHTML]="post.data().content" class="post_content"></div>
+
+      <div class="comment_box">
+        <h4>Comments ( {{ total_comments }} )</h4>
+        <input
+          type="text"
+          class="form-control input_box"
+          placeholder="Write Comment here. . ."
+          [(ngModel)]="comment"
+        />
+        <button
+          class="edit_btn"
+          [disabled]="!(comment.length > 3)"
+          (click)="addComment()"
+        >
+          Add Comment
+        </button>
+      </div>
+      <hr />
+      <div class="all_comments">
+        <div *ngFor="let comment of commentData">
+          <p>
+            {{ comment.data().comment }}
+            <a routerLink="/profile/{{ comment.data().commBy }}"
+              >~@ View user</a
+            >
+          </p>
+          <h6>
+            {{ comment.data().created.toDate() | date: "MMM dd, yyyy h:mm a" }}
+          </h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

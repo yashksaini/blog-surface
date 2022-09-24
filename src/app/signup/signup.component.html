@@ -1,0 +1,74 @@
+<div class="container">
+  <h2 style="text-align: center" class="mt-2 mb-4">SignUp</h2>
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <input
+            type="text"
+            placeholder="First Name"
+            class="form-control form-input"
+            [formControl]="myForm.controls['firstName']"
+          />
+        </div>
+        <div class="col-md-6">
+          <input
+            type="text"
+            placeholder="Last Name"
+            class="form-control form-input"
+            [formControl]="myForm.controls['lastName']"
+          />
+        </div>
+      </div>
+      <input
+        type="email"
+        placeholder="Email"
+        class="form-control form-input mt-2"
+        [formControl]="myForm.controls['email']"
+      />
+      <div
+        class="alert alert-warning mt-2"
+        *ngIf="
+          !myForm.controls['email'].valid && myForm.controls['email'].touched
+        "
+      >
+        A valid email is required
+      </div>
+      <input
+        type="password"
+        placeholder="Create Password"
+        class="form-control form-input mt-2"
+        [formControl]="myForm.controls['password']"
+      />
+      <div
+        class="alert alert-warning mt-2"
+        *ngIf="
+          !myForm.controls['password'].valid &&
+          myForm.controls['password'].touched
+        "
+      >
+        Password should be atleast 6 characters long.
+      </div>
+      <button class="btn sub_btn mt-2" type="submit" [disabled]="!myForm.valid">
+        Submit
+      </button>
+
+      <div class="alert alert-danger mt-2" *ngIf="userError.length > 0">
+        {{ userError }}
+      </div>
+      <div class="alert alert-success mt-2" *ngIf="message.length > 0">
+        {{ message }}
+      </div>
+
+      <h5
+        class="already_user"
+        data-bs-dismiss="modal"
+        style="text-align: center"
+        data-bs-toggle="modal"
+        data-bs-target="#login1"
+      >
+        Already have account? LogIn Here
+      </h5>
+    </div>
+  </form>
+</div>

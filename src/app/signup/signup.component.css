@@ -1,0 +1,41 @@
+.form-input {
+  padding: 12px;
+  border-radius: 0px;
+}
+.form-input:focus {
+  box-shadow: none;
+}
+.sub_btn {
+  width: 100%;
+  padding: 15px;
+  border-radius: 0px;
+  background-color: #0094ff;
+  color: white;
+  font-size: 25px;
+  text-align: center;
+}
+.already_user {
+  text-align: center;
+  color: #0094ff;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.already_user:hover {
+  cursor: pointer;
+  color: rgb(107, 173, 7);
+}
+.google_btn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 0px;
+  background-color: #fff;
+  color: rgb(59, 59, 59);
+  font-size: 25px;
+  text-align: center;
+}
+.g_logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}

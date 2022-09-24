@@ -1,0 +1,72 @@
+<div class="container-fluid" *ngFor="let profile of profileData">
+  <div class="row">
+    <div class="col-lg-5 col-md-6" style="text-align: center">
+      <div class="ImageBox">
+        <h1 class="head_text">Profile</h1>
+        <img src="{{ profile.data().imageURL }}" class="profileImg" /><br />
+        <button
+          data-bs-toggle="modal"
+          data-bs-target="#editprofile"
+          class="edit_btn"
+          *ngIf="currentUser"
+        >
+          Edit Image
+        </button>
+      </div>
+    </div>
+    <div class="col-lg-7 col-md-6">
+      <div class="ImageBox1">
+        <h1 class="name">{{ profile.data().name }}</h1>
+        <h2 class="email">{{ profile.data().email }}</h2>
+        <div *ngIf="profile.data().hobbies.length > 0" class="hobby">
+          <span class="badge" *ngFor="let hobby of hobbies">
+            {{ hobby }}
+          </span>
+        </div>
+        <hr />
+        <div class="bio">
+          <h1>Bio</h1>
+          <p>{{ profile.data().bio }}</p>
+        </div>
+        <div>
+          <h3>
+            Total Posts ({{ total_posts }}) <i class="fas fa-chevron-down"></i>
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr />
+
+<app-blogs
+  *ngFor="let post of postsData"
+  [post]="post"
+  (onDelete)="onDelete()"
+></app-blogs>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="editprofile"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Edit Profile Picture</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <app-editprofile></app-editprofile>
+      </div>
+    </div>
+  </div>
+</div>

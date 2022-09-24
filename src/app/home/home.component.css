@@ -1,0 +1,27 @@
+.home_img {
+  width: 100%;
+}
+.home_img2 {
+  width: 60%;
+  margin-left: 20%;
+}
+.signup {
+  margin-top: 36px;
+}
+.home_title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 600;
+  margin-top: 24px;
+}
+.home_content {
+  line-height: 2;
+  font-size: 20px;
+  margin: 24px 6px;
+  font-weight: 500;
+}
+.footer {
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+}

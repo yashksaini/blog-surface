@@ -1,0 +1,73 @@
+.profileImg {
+  max-width: 60%;
+  width: 200px;
+  margin-top: 0px;
+  border-radius: 1000px;
+}
+.edit_btn {
+  border: 1px solid #92d1ff;
+  background-color: #edf8ff;
+  color: #0094ff;
+  width: 140px;
+  height: 40px;
+  margin-top: 8px;
+  border-radius: 200px;
+  transition: all 0.4s;
+}
+.edit_btn:hover {
+  border: 1px solid #6cc2ff;
+  background-color: #d8f1ff;
+  transition: all 0.4s;
+}
+.ImageBox {
+  margin: 12px 6px 12px 12px;
+  border: 1px solid #b6b6b6;
+  padding: 16px;
+  border-radius: 16px;
+}
+.card_name {
+  font-size: 28px;
+  font-weight: 500;
+  margin: 16px 0;
+}
+.post_head {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 500;
+  margin: 16px 0;
+}
+.posts_head {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 500;
+  margin: 0px 0;
+}
+.input_text {
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 8px;
+  margin-bottom: 0px;
+}
+.input_box {
+  border-radius: 0px;
+  padding: 8px;
+}
+.input_box:focus {
+  outline: none;
+  box-shadow: none;
+}
+.submit_btn {
+  border: none;
+  background-color: #0094ff;
+  color: #edf8ff;
+  width: 140px;
+  height: 40px;
+  margin: 8px 0;
+
+  border-radius: 200px;
+  transition: all 0.4s;
+}
+.submit_btn:disabled {
+  background-color: #bbbbbb;
+  color: #fff;
+}

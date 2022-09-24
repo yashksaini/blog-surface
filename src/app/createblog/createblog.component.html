@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="row">
+    <div
+      class="col-md-5 col-lg-3"
+      *ngFor="let profile of profileData"
+      style="text-align: center"
+    >
+      <div class="ImageBox">
+        <img src="{{ profile.data().imageURL }}" class="profileImg" /><br />
+        <h1 class="card_name">{{ profile.data().name }}</h1>
+        <button class="edit_btn" routerLink="/edit">Update Profile</button>
+      </div>
+    </div>
+    <div class="col-md-7 col-lg-6">
+      <h1 class="post_head">Create Post</h1>
+      <p class="input_text">Post Title</p>
+      <input
+        type="text"
+        class="form-control input_box"
+        placeholder="Post Title goes here. . ."
+        [(ngModel)]="title"
+      />
+      <p class="input_text">Post Content</p>
+      <angular-editor
+        [placeholder]="'Post Content. . .'"
+        [config]="editorConfig"
+        [(ngModel)]="content"
+        style="background-color: #fff"
+      ></angular-editor>
+      <button
+        class="submit_btn"
+        style="float: right"
+        [disabled]="!(title.length > 0 && content.length > 0)"
+        (click)="addPost()"
+      >
+        Create Post
+      </button>
+    </div>
+    <div class="col-md-12 col-lg-3">
+      <div class="ImageBox">
+        <div class="row">
+          <div class="col-lg-12 posts_head col-6">Posts</div>
+          <div class="col-lg-12 posts_head col-6">{{ total_posts }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr />
+<app-blogs
+  *ngFor="let post of postsData"
+  [post]="post"
+  (onDelete)="onDelete()"
+></app-blogs>

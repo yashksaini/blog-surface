@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-12 col-lg-8 mt-2 mb-2">
+      <div class="post">
+        <div class="title">{{ postData.title }}</div>
+        <div
+          class="content"
+          [innerHTML]="postData.content.substring(0, 150)"
+        ></div>
+        <p class="readMore">
+          <a routerLink="/view/{{ postData.post_id }}">. . . Read More</a>
+        </p>
+
+        <div class="footer">
+          <span
+            ><b>Posted on</b>
+            {{ postData.created.toDate() | date: "MMM dd, yyyy " }}</span
+          >
+          <button *ngIf="currentUser" class="delete" (click)="delete()">
+            Delete
+          </button>
+          <button
+            *ngIf="!currentUser"
+            class="edit_btn"
+            routerLink="/profile/{{ postData.owner }}"
+          >
+            View Writer
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

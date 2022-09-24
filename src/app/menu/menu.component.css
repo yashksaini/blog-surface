@@ -1,0 +1,58 @@
+.logo {
+  width: 50px;
+  height: 50px;
+}
+.nav_back {
+  background-color: #0094ff;
+  min-height: 70px;
+  color: #fff;
+}
+.proj {
+  letter-spacing: 1px;
+  font-size: 24px;
+  font-weight: 600;
+}
+.menu_btn {
+  font-size: 36px;
+  line-height: 36px;
+  color: #fff;
+  outline: none;
+  border: none;
+}
+.menu_btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+.nav-link {
+  color: white;
+  font-size: 20px;
+  float: left;
+  margin-left: 12px;
+  font-weight: 400;
+}
+.nav-link a {
+  text-decoration: none;
+  color: white;
+}
+.nav-link a:hover {
+  color: #222222;
+  transition: all 0.5s;
+}
+.navbar-nav {
+  text-align: center;
+}
+.navbar-nav li {
+  text-align: center;
+}
+#login {
+  position: absolute;
+  right: 30px;
+  top: 12px;
+}
+
+@media only screen and (max-width: 992px) {
+  #login {
+    position: relative;
+    padding: 20px;
+  }
+}

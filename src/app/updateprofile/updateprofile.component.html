@@ -1,0 +1,41 @@
+<div class="container" *ngFor="let profile of profileData">
+  <div class="row">
+    <div class="col-md-3" style="text-align: center">
+      <div class="ImageBox">
+        <img src="{{ profile.data().imageURL }}" class="profileImg" /><br />
+      </div>
+    </div>
+    <div class="col-md-6">
+      <h1 class="head_text">Edit Profile</h1>
+      <p class="input_name">Name</p>
+      <input
+        type="text"
+        placeholder="Full name here. . ."
+        class="form-control input_box"
+        [(ngModel)]="name"
+      />
+      <p class="input_name">Hobbies</p>
+      <span><i>(Comma Separate Each Hobby)</i></span>
+      <textarea
+        placeholder="Write Hobbies Here . . ."
+        rows="2"
+        class="form-control input_box"
+        [(ngModel)]="hobbies"
+      ></textarea>
+      <p class="input_name">Bio</p>
+      <textarea
+        placeholder="Add bio here. . ."
+        rows="4"
+        class="form-control input_box"
+        [(ngModel)]="bio"
+      ></textarea>
+      <button
+        class="edit_btn"
+        (click)="update()"
+        [disabled]="!(name.length > 2)"
+      >
+        Update
+      </button>
+    </div>
+  </div>
+</div>

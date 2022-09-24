@@ -1,0 +1,79 @@
+.post_head {
+  font-size: 44px;
+  font-weight: 600;
+  margin: 24px 8px 0 8px;
+}
+.post_content {
+  margin-bottom: 24px;
+  font-size: 18px;
+  line-height: 2;
+  padding: 12px;
+}
+.comment_box {
+  text-align: right;
+}
+.comment_box h4 {
+  font-size: 24px;
+  font-weight: 500;
+  text-align: left;
+}
+.edit_btn {
+  border: 1px solid #92d1ff;
+  background-color: #edf8ff;
+  color: #0094ff;
+  width: 140px;
+  height: 40px;
+  margin: 12px 0;
+  border-radius: 200px;
+  transition: all 0.4s;
+}
+.edit_btn:disabled {
+  border: 1px solid #cdd3d6;
+  background-color: #e1e9ee;
+  transition: all 0.4s;
+}
+.input_box {
+  padding: 12px 12px;
+  font-size: 18px;
+  border-radius: 0px;
+  border: 2px solid #a7a7a7;
+}
+.input_box:focus {
+  outline: none;
+  box-shadow: none;
+}
+.all_comments div {
+  display: block;
+  padding: 12px 16px;
+  margin: 8px;
+  border: 1px solid #a7a7a7;
+  border-radius: 24px;
+}
+.all_comments div p {
+  text-align: left;
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 0px;
+}
+.all_comments div a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 12px;
+  display: inline;
+  text-align: right;
+}
+.all_comments h6 {
+  text-align: right;
+  color: #3b3b3b;
+  font-size: 16px;
+}
+@media only screen and (max-width: 536px) {
+  .post_head {
+    font-size: 24px;
+  }
+  .post_content {
+    font-size: 16px;
+    padding: 6px;
+  }
+}

@@ -1,0 +1,87 @@
+.head_text {
+  font-size: 48px;
+  text-align: center;
+  line-height: 1.5;
+  margin: 16px 0;
+  font-weight: 900;
+}
+.profileImg {
+  max-width: 80%;
+  width: 280px;
+  margin-top: 0px;
+  border-radius: 1000px;
+}
+.edit_btn {
+  border: 1px solid #92d1ff;
+  background-color: #edf8ff;
+  color: #0094ff;
+  width: 140px;
+  height: 40px;
+  margin: 24px 0;
+  border-radius: 200px;
+  transition: all 0.4s;
+}
+.edit_btn:disabled {
+  border: 1px solid #cbd7e0;
+  background-color: #cfd6da;
+  transition: all 0.4s;
+}
+.ImageBox {
+  margin: 12px 6px 12px 12px;
+  padding: 16px;
+  border-radius: 16px;
+}
+.ImageBox1 {
+  margin: 12px 12px 12px 6px;
+  padding: 16px;
+  border-radius: 16px;
+}
+.name {
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+.email {
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+.hobby {
+  padding: 16px 0px 4px 0;
+}
+.hobby span {
+  padding: 6px 20px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 8px 12px 8px 0;
+  border-radius: 200px;
+  border: 1px solid #6cc2ff;
+  background-color: #d8f1ff;
+  color: #017ed8;
+}
+.bio {
+  margin-top: 16px;
+}
+.bio h1 {
+  font-size: 44px;
+  font-weight: 700;
+}
+.bio p {
+  font-size: 18px;
+  margin-top: 24px;
+}
+.input_name {
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 8px;
+  margin-bottom: 0px;
+}
+.input_box {
+  border-radius: 0px;
+  padding: 8px;
+}
+.input_box:focus {
+  outline: none;
+  box-shadow: none;
+}
